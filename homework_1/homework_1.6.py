@@ -1,10 +1,16 @@
 school = {}
-school.update({'1а':30, '1б':28, '2б':29})
-school['6а'] = 32
-school['7в'] = 31
-school['4a'] = 33
-school['4б'] = 32
-school['9а'] = 31
-school['10в'] = 33
-school['11c'] = 32
+school.update({
+    '1a': 30,
+    '1b': 28,
+    '2b': 29,
+    '3c': 33,
+    '3d': 34,
+    '3f': 35,
+    '4a': 36,
+    '4b': 37,
+    '5f': 21,
+    '8d': 22
+
+})
+
 print(school)
