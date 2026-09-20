@@ -1,16 +1,16 @@
 from collections import Counter
 
 
-def get_test_statistics(entered_value):
-    entered_value = Counter(entered_value)
-    if "PASS" not in entered_value:
-        entered_value["PASS"] = 0
-    if "SKIP" not in entered_value:
-        entered_value["SKIP"] = 0
-    if "FAIL" not in entered_value:
-        entered_value["FAIL"] = 0
+def get_test_statistics(results):
+    results = Counter(results)
+    if "PASS" not in results:
+        results["PASS"] = 0
+    if "SKIP" not in results:
+        results["SKIP"] = 0
+    if "FAIL" not in results:
+        results["FAIL"] = 0
 
-    return dict(entered_value)
+    return dict(results)
 
 
 while True:
@@ -27,7 +27,10 @@ statuses = [
     if status == 'PASS' or status == 'SKIP' or status == 'FAIL'
 ]
 test_statistics = get_test_statistics(statuses)
+total_count = sum(test_statistics.values())
 for key, value in test_statistics.items():
     print(f"{key}: {value}")
-total_count = sum(test_statistics.values())
-print(f"Successful: {((test_statistics['PASS'] / total_count) * 100):.1f}%")
+passed_percentage = 0
+if total_count != 0:
+    passed_percentage = ((test_statistics['PASS'] / total_count) * 100)
+print(f"Successful: {passed_percentage:.1f}%")
