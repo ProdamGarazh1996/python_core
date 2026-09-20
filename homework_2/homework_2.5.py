@@ -1,13 +1,13 @@
 from collections import Counter
 
-complete_tests_count = 0
+tests_count = 0
 statuses = []
 while True:
-    complete_tests_count = input("Please enter number of tests: ")
-    if complete_tests_count == "" or complete_tests_count.isdigit() is False:
+    tests_count = input("Please enter number of tests: ")
+    if tests_count == "" or tests_count.isdigit() is False:
         print("Incorrect Input")
     else:
-        complete_tests_count = int(complete_tests_count)
+        tests_count = int(tests_count)
         break
 
 while True:
@@ -19,7 +19,7 @@ while True:
         print("Incorrect status!")
         continue
     statuses.append(status_entered)
-    if len(statuses) == complete_tests_count:
+    if len(statuses) == tests_count:
         break
 
 statistics = Counter(statuses)
@@ -37,3 +37,4 @@ else:
 print(message)
 for key, value in statistics.items():
     print(f"{key}: {value}")
+print(f"Successful: {((statistics['PASS'] / tests_count) * 100):.1f}%")
