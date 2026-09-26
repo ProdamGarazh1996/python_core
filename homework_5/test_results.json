@@ -1,0 +1,32 @@
+[
+  {
+    "name": "test_user_login",
+    "status": "PASS",
+    "duration": 1.25
+  },
+  {
+    "name": "test_api_connection",
+    "status": "PASS",
+    "duration": 0.45
+  },
+  {
+    "name": "test_payment_gateway",
+    "status": "FAIL",
+    "duration": 4.82
+  },
+  {
+    "name": "test_file_upload",
+    "status": "SKIP",
+    "duration": 0.0
+  },
+  {
+    "name": "test_database_backup",
+    "status": "PASS",
+    "duration": 12.34
+  },
+  {
+    "name": "test_password_recovery",
+    "status": "FAIL",
+    "duration": 2.1
+  }
+]
