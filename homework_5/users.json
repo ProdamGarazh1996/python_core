@@ -1,0 +1,17 @@
+[
+  {
+    "username": "valid_user",
+    "password": "Password123",
+    "expected_result": "SUCCESS"
+  },
+  {
+    "username": "wrong_password_user",
+    "password": "WrongPassword",
+    "expected_result": "AUTH_ERROR"
+  },
+  {
+    "username": "broken_user",
+    "password": "WrongPassword2",
+    "expected_result": "AUTH_ERROR"
+  }
+]
