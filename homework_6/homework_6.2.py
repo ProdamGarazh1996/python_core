@@ -1,9 +1,9 @@
 def create_time_checker(max_time):
     def time_checker(time):
         if time > max_time:
-            return True
+            return 'Лимит превышен'
         else:
-            return False
+            return 'Лимит не превышен'
 
     return time_checker
 
