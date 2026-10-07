@@ -28,7 +28,10 @@ class Therapist(Doctor):
             doctor = Dentist("Петрова")
         else:
             doctor = self
-        return doctor
+        patient.doctor = doctor
+        print(f"Пациенту {patient.name} (план {patient.treatment_plan}) "
+              f"назначен врач: {doctor.name}")
+        patient.doctor.treat()
 
 
 class Patient:
@@ -64,8 +67,4 @@ if __name__ == "__main__":
     ]
 
     for patient in patients:
-        assigned_doctor = therapist.assign_doctor(patient)
-        patient.doctor = assigned_doctor
-        print(f"Пациенту {patient.name} (план {patient.treatment_plan}) "
-              f"назначен врач: {assigned_doctor.name}")
-        patient.doctor.treat()
+        therapist.assign_doctor(patient)

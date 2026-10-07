@@ -17,11 +17,11 @@ class CreditCard:
 
 
 credit_card = CreditCard('1', 22)
-credit_card.withdraw(10)
+second_credit_card = CreditCard('2', 33)
+third_credit_card = CreditCard('3', 44)
+credit_card.deposit(10)
 credit_card.show_info()
-credit_card.withdraw(2)
-credit_card.show_info()
-credit_card.withdraw(30)
-credit_card.show_info()
-credit_card.deposit(15)
-credit_card.show_info()
+second_credit_card.deposit(20)
+second_credit_card.show_info()
+third_credit_card.withdraw(30)
+third_credit_card.show_info()
